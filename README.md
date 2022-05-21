@@ -1,10 +1,8 @@
-# terminal-DE (for ES-DE)
+# terminal-DE (for Batocera, AmberELEC, JELOS)
 
 ## Details
 
-- Built for the development version of ES-DE (v2.0)
 - Designed to emulate the simplicity of terminal
-- To use at this time you must be using a development version of ES-DE built directly from source (see: https://gitlab.com/leonstyhre/emulationstation-de/-/blob/master/INSTALL-DEV.md)
 
 ## Preview
  
