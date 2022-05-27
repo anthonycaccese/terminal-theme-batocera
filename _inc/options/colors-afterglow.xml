@@ -1,6 +1,6 @@
 <theme>
    <variables>
-      <backgroundColor>212121</backgroundColor>
+      <backgroundColor>000000</backgroundColor>
       <bashPromptColor>9CAA71</bashPromptColor>
       <selectorColor>00000000</selectorColor>
       <selectedColor>F5C880</selectedColor>

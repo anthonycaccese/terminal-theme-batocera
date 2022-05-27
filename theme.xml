@@ -9,10 +9,11 @@ license:       creative commons CC-BY-NC-SA
    <formatVersion>7</formatVersion>
 
    <!-- Distribution -->
-   <subset ifNotArch="amberelec-rg552,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v" name="distribution" displayName="Distribution">
+   <subset name="distribution" displayName="Distribution">
       <include name="jelos" displayName="JELOS" />
       <include name="batocera" displayName="Batocera" />
       <include name="retrobat" displayName="RetroBat" />
+      <include name="amberelec" displayName="AmberELEC" />
    </subset>
 
    <!-- Color -->
@@ -21,24 +22,13 @@ license:       creative commons CC-BY-NC-SA
       <include name="colors-belafontenight" displayName="belafontenight">./_inc/options/colors-belafontenight.xml</include>
    </subset>
 
-   <!-- Aspect Ratio -->
-   <subset name="aspect-ratio" displayName="Aspect Ratio">
-      <include ifArch="rg552,amberelec-rg552" name="5-3" displayName="5:3" />
-      <include ifArch="rg351p,amberelec-rg351p" name="3-2" displayName="3:2" />
-      <include ifArch="rg351mp,rg351v,amberelec-rg351mp,amberelec-rg351v" name="4-3" displayName="4:3" />
-      <include ifNotArch="rg351p,rg351mp,rg351v,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v" name="16-9" displayName="16:9" />
-      <include ifNotArch="rg552,rg351p,rg351mp,rg351v,amberelec-rg552,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v" name="4-3" displayName="4:3" />
-      <include ifNotArch="rg552,rg351p,rg351mp,rg351v,amberelec-rg552,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v" name="3-2" displayName="3:2" />
-      <include ifNotArch="rg552,rg351p,rg351mp,rg351v,amberelec-rg552,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v" name="5-3" displayName="5:3" />
-   </subset>
-
    <variables>
       <bodyFont>./_inc/fonts/UbuntuMono-Regular.ttf</bodyFont>
       <spacerImage>./_inc/images/utility/space.png</spacerImage>
       <distributionName ifSubset="distribution:retrobat">RetroBat</distributionName>
       <distributionName ifSubset="distribution:batocera">Batocera</distributionName>
+      <distributionName ifSubset="distribution:amberelec">AmberELEC</distributionName>
       <distributionName ifSubset="distribution:jelos">JELOS</distributionName>
-      <distributionName ifArch="amberelec-rg552,amberelec-rg351p,amberelec-rg351mp,amberelec-rg351v">AmberELEC</distributionName>
    </variables>
 
    <view name="system,basic,detailed,video">
@@ -57,7 +47,7 @@ license:       creative commons CC-BY-NC-SA
       <text name="bash-prompt" extra="true">
          <origin>0 0</origin>
          <pos>0.04375 0.077777777777778</pos><!-- 56 56 -->
-         <size>0 0</size>
+         <size>1 0</size>
          <text>${distributionName}:~ $_</text>
          <fontPath>${bodyFont}</fontPath>
          <fontSize>0.04</fontSize><!-- 20 -->
@@ -99,8 +89,8 @@ license:       creative commons CC-BY-NC-SA
       </text>
       <textlist name="gamelist">
          <origin>0 0</origin>
-         <pos>0.04375 0.166666666666667</pos><!-- 56 120 -->
-         <size>0.9125 0.833333333333333</size><!-- 1168 600 -->
+         <pos>0.04375 0.180555555555556</pos><!-- 56 130 -->
+         <size>0.9125 0.805555555555556</size><!-- 1168 580 -->
          <alignment>left</alignment>
          <fontSize>0.04</fontSize><!-- 20 -->
          <lineSpacing>1.5</lineSpacing>
@@ -162,16 +152,13 @@ license:       creative commons CC-BY-NC-SA
          <fontPath>${bodyFont}</fontPath>
          <fontSize>0.03125</fontSize>
          <size>0 0</size>
-         <color>ffffffbb</color>
+         <color>ffffff66</color>
       </text>
       <batteryIndicator name="batteryIndicator">
-         <color>ffffffbb</color>
+         <color>ffffff66</color>
          <itemSpacing>0</itemSpacing>
-      </batteryIndicator>
-      <batteryIndicator ifSubset="aspect-ratio:5-3|16-9" name="batteryIndicator">
          <pos>0.015009380863039 0.025</pos><!-- 8 8 -->
-         <size ifSubset="aspect-ratio:5-3">0.969981238273921 0.046875</size><!-- 1862.36397748592832 54 - sized off of 1920x1152 to make the icon clear -->
-         <size ifSubset="aspect-ratio:16-9">0.969981238273921 0.05</size><!-- 1862.36397748592832 54 - sized off of 1920x1080 to make the icon clear -->
+         <size>0.969981238273921 0.05</size><!-- 1862.36397748592832 54 - sized off of 1920x1080 to make the icon clear -->
          <full>./_inc/images/utility/icons/bigscreen/battery-100-vertical.svg</full>
          <at75>./_inc/images/utility/icons/bigscreen/battery-75-vertical.svg</at75>
          <at50>./_inc/images/utility/icons/bigscreen/battery-50-vertical.svg</at50>
@@ -179,19 +166,6 @@ license:       creative commons CC-BY-NC-SA
          <empty>./_inc/images/utility/icons/bigscreen/battery-0-vertical.svg</empty>
          <incharge>./_inc/images/utility/icons/bigscreen/battery-charging-vertical.svg</incharge>
          <networkIcon>./_inc/images/utility/icons/bigscreen/wifi-vertical.svg</networkIcon>
-      </batteryIndicator>
-      <batteryIndicator ifSubset="aspect-ratio:3-2|4-3" name="batteryIndicator">
-         <pos ifSubset="aspect-ratio:3-2">0.016666666666667 0.025</pos><!-- 8 8 -->
-         <size ifSubset="aspect-ratio:3-2">0.966666666666667 0.0625</size><!-- 464 20 - sized off of 480x320 to make the icon clear -->
-         <pos ifSubset="aspect-ratio:4-3">0.025 0.033333333333333</pos><!-- 16 16 -->
-         <size ifSubset="aspect-ratio:4-3">0.953125 0.05</size><!-- 610 24 - sized off of 640x480 to make the icon clear -->
-         <full>./_inc/images/utility/icons/tinyscreen/battery-100-vertical.svg</full>
-         <at75>./_inc/images/utility/icons/tinyscreen/battery-75-vertical.svg</at75>
-         <at50>./_inc/images/utility/icons/tinyscreen/battery-50-vertical.svg</at50>
-         <at25>./_inc/images/utility/icons/tinyscreen/battery-25-vertical.svg</at25>
-         <empty>./_inc/images/utility/icons/tinyscreen/battery-0-vertical.svg</empty>
-         <incharge>./_inc/images/utility/icons/tinyscreen/battery-charging-vertical.svg</incharge>
-         <networkIcon>./_inc/images/utility/icons/tinyscreen/wifi-vertical.svg</networkIcon>
       </batteryIndicator>
       <controllerActivity name="controllerActivity">
          <visible>false</visible>
