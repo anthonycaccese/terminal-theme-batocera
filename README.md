@@ -1,4 +1,4 @@
-# terminal-DE (for Batocera, AmberELEC, JELOS)
+# es-theme-terminal (for Batocera, AmberELEC, JELOS)
 
 ## Details
 

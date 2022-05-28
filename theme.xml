@@ -24,6 +24,7 @@ license:       creative commons CC-BY-NC-SA
 
    <variables>
       <bodyFont>./_inc/fonts/UbuntuMono-Regular.ttf</bodyFont>
+      <menuFont>./_inc/fonts/Oxygen-Bold.ttf</menuFont>
       <spacerImage>./_inc/images/utility/space.png</spacerImage>
       <distributionName ifSubset="distribution:retrobat">RetroBat</distributionName>
       <distributionName ifSubset="distribution:batocera">Batocera</distributionName>
@@ -102,33 +103,51 @@ license:       creative commons CC-BY-NC-SA
          <primaryColor>${primaryColor}</primaryColor>
          <secondaryColor>${secondaryColor}</secondaryColor>
       </textlist>
-      <video name="md_video">
-         <origin>1 0.5</origin>
-         <pos>0.95625 0.5</pos>
+   </view>
+
+   <view name="detailed,video">
+      <textlist name="gamelist">
+         <size>0.4 0.805555555555556</size>
+      </textlist>
+   </view>
+
+   <view name="detailed">
+      <image name="md_thumbnail">
+         <origin>1 0</origin>
+         <pos>0.95625 0.077777777777778</pos>
          <maxSize>0.35 0.65</maxSize>
-         <delay>0.2</delay>
+         <zIndex>2</zIndex>
+      </image>
+   </view>
+
+   <view name="video">
+      <video name="md_video">
+         <origin>1 0</origin>
+         <pos>0.95625 0.077777777777778</pos>
+         <maxSize>0.35 0.65</maxSize>
+         <delay>0.5</delay>
          <effect>none</effect>
          <showSnapshotDelay>true</showSnapshotDelay>
          <showSnapshotNoVideo>true</showSnapshotNoVideo>
-         <snapshotSource>thumbnail</snapshotSource>
          <snapshotSource>image</snapshotSource>
+         <snapshotSource>thumbnail</snapshotSource>
          <zIndex>2</zIndex>
       </video>
    </view>
 
    <view name="menu">
       <menuText name="menutitle">
-         <fontPath>${bodyFont}</fontPath>
+         <fontPath>${menuFont}</fontPath>
          <fontSize>0.04</fontSize>
          <color>ffffff</color>
       </menuText>
       <menuText name="menufooter">
-         <fontPath>${bodyFont}</fontPath>
+         <fontPath>${menuFont}</fontPath>
          <fontSize>0.04</fontSize>
          <color>666666</color>
       </menuText>
       <menuText name="menutext">
-         <fontPath>${bodyFont}</fontPath>
+         <fontPath>${menuFont}</fontPath>
          <fontSize>0.042</fontSize>
          <color>444444</color>
          <color ifarch="amberelec-rg351mp">666666</color>
@@ -137,28 +156,22 @@ license:       creative commons CC-BY-NC-SA
          <selectedColor>ffffff</selectedColor>
       </menuText>
       <menuTextSmall name="menutextsmall">
-         <fontPath>${bodyFont}</fontPath>
+         <fontPath>${menuFont}</fontPath>
          <fontSize>0.038</fontSize>
          <color>777777</color>
       </menuTextSmall>
       <menuBackground name="menubg">
-         <color>111111</color>
+         <color>101010</color>
          <cornerSize>20 20</cornerSize>
       </menuBackground>
    </view>
 
    <view name="screen">
-      <text name="clock">
-         <fontPath>${bodyFont}</fontPath>
-         <fontSize>0.03125</fontSize>
-         <size>0 0</size>
-         <color>ffffff66</color>
-      </text>
       <batteryIndicator name="batteryIndicator">
          <color>ffffff66</color>
          <itemSpacing>0</itemSpacing>
-         <pos>0.015009380863039 0.025</pos><!-- 8 8 -->
-         <size>0.969981238273921 0.05</size><!-- 1862.36397748592832 54 - sized off of 1920x1080 to make the icon clear -->
+         <pos>0.015009380863039 0.87</pos>
+         <size>0.94 0.05</size>
          <full>./_inc/images/utility/icons/bigscreen/battery-100-vertical.svg</full>
          <at75>./_inc/images/utility/icons/bigscreen/battery-75-vertical.svg</at75>
          <at50>./_inc/images/utility/icons/bigscreen/battery-50-vertical.svg</at50>
@@ -167,6 +180,9 @@ license:       creative commons CC-BY-NC-SA
          <incharge>./_inc/images/utility/icons/bigscreen/battery-charging-vertical.svg</incharge>
          <networkIcon>./_inc/images/utility/icons/bigscreen/wifi-vertical.svg</networkIcon>
       </batteryIndicator>
+      <text name="clock">
+         <visible>false</visible>
+      </text>
       <controllerActivity name="controllerActivity">
          <visible>false</visible>
       </controllerActivity>
