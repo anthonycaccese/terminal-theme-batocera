@@ -20,6 +20,7 @@ license:       creative commons CC-BY-NC-SA
    <subset name="color" displayName="Color">
       <include name="colors-afterglow" displayName="afterglow">./_inc/options/colors-afterglow.xml</include>
       <include name="colors-belafontenight" displayName="belafontenight">./_inc/options/colors-belafontenight.xml</include>
+      <include name="colors-jelos" displayName="jelos">./_inc/options/colors-jelos.xml</include>
    </subset>
 
    <variables>
@@ -59,13 +60,13 @@ license:       creative commons CC-BY-NC-SA
    <view name="system">
       <image name="logo">
          <path>./_inc/images/systems/${system.theme}.svg</path>
-         <color>${selectedColor}</color>
+         <color>${primaryColor}</color>
       </image>
       <text name="logoText">
          <fontPath>${bodyFont}</fontPath>
          <lineSpacing>1</lineSpacing>
          <alignment>center</alignment>
-         <color>${selectedColor}</color>
+         <color>${primaryColor}</color>
       </text>
       <carousel name="systemcarousel">
          <size>1 1</size>

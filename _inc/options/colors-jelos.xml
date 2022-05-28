@@ -1,0 +1,10 @@
+<theme>
+   <variables>
+      <backgroundColor>000000</backgroundColor>
+      <bashPromptColor>5998FF</bashPromptColor>
+      <selectorColor>00000000</selectorColor>
+      <selectedColor>F5C880</selectedColor>
+      <primaryColor>7D7D7D</primaryColor>
+      <secondaryColor>7D7D7D</secondaryColor>
+   </variables>
+</theme>
