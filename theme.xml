@@ -91,7 +91,7 @@ license:       creative commons CC-BY-NC-SA
       </text>
       <textlist name="gamelist">
          <origin>0 0</origin>
-         <pos>0.04375 0.180555555555556</pos><!-- 56 130 -->
+         <pos>0.04375 0.191666666666667</pos><!-- 56 138 -->
          <size>0.9125 0.805555555555556</size><!-- 1168 580 -->
          <alignment>left</alignment>
          <fontSize>0.04</fontSize><!-- 20 -->
@@ -114,8 +114,8 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="detailed">
       <image name="md_thumbnail">
-         <origin>1 0</origin>
-         <pos>0.95625 0.077777777777778</pos>
+         <origin>1 1</origin>
+         <pos>0.95625 0.93</pos>
          <maxSize>0.35 0.65</maxSize>
          <zIndex>2</zIndex>
       </image>
@@ -123,8 +123,8 @@ license:       creative commons CC-BY-NC-SA
 
    <view name="video">
       <video name="md_video">
-         <origin>1 0</origin>
-         <pos>0.95625 0.077777777777778</pos>
+         <origin>1 1</origin>
+         <pos>0.95625 0.93</pos>
          <maxSize>0.35 0.65</maxSize>
          <delay>0.5</delay>
          <effect>none</effect>
@@ -171,7 +171,7 @@ license:       creative commons CC-BY-NC-SA
       <batteryIndicator name="batteryIndicator">
          <color>ffffff66</color>
          <itemSpacing>0</itemSpacing>
-         <pos>0.015009380863039 0.87</pos>
+         <pos>0.015 0.077777777777778</pos>
          <size>0.94 0.05</size>
          <full>./_inc/images/utility/icons/bigscreen/battery-100-vertical.svg</full>
          <at75>./_inc/images/utility/icons/bigscreen/battery-75-vertical.svg</at75>
