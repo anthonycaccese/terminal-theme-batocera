@@ -90,9 +90,9 @@ license:       creative commons CC-BY-NC-SA
          <text>${distributionName}:${system.fullName} $_</text>
       </text>
       <textlist name="gamelist">
-         <origin>0 0</origin>
-         <pos>0.04375 0.191666666666667</pos><!-- 56 138 -->
-         <size>0.9125 0.805555555555556</size><!-- 1168 580 -->
+         <origin>0 1</origin>
+         <pos>0.04375 0.94</pos><!-- 56 664 -->
+         <size>0.9125 0.755555555555556</size><!-- 1168 544 -->
          <alignment>left</alignment>
          <fontSize>0.04</fontSize><!-- 20 -->
          <lineSpacing>1.5</lineSpacing>
@@ -104,11 +104,20 @@ license:       creative commons CC-BY-NC-SA
          <primaryColor>${primaryColor}</primaryColor>
          <secondaryColor>${secondaryColor}</secondaryColor>
       </textlist>
+      <!--<image name="gamelistbackground" extra="true">
+         <origin>0 1</origin>
+         <pos>0.04375 0.922222222222222</pos>
+         <size>0.9125 0.755555555555556</size>
+         <path>${spacerImage}</path>
+         <tile>true</tile>
+         <zIndex>0</zIndex>
+         <color>FF0000</color>
+      </image>-->
    </view>
 
    <view name="detailed,video">
       <textlist name="gamelist">
-         <size>0.4 0.805555555555556</size>
+         <size>0.4 0.755555555555556</size>
       </textlist>
    </view>
 
